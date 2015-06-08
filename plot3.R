@@ -26,6 +26,12 @@ summary(powerdata1$Datetime)# make sure the data covers the whole specified time
 par(mfrow=c(1,1))
 plot(powerdata1$Datetime, powerdata1$Global_active_power,  type="l", xlab="",
     ylab="Global Active Power (kilowatts)")
+    
+lines(powerdata1$Datetime, powerdata1$Sub_metering_2,  type="l", col="red", xlab="", ylab="")
+lines(powerdata1$Datetime, powerdata1$Sub_metering_3,  type="l", col="blue", xlab="", ylab="")
+
+legend("topright", lty=1, col=c("black","red","blue"), cex=0.95,
+       legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
 # Save the second plot to a png file
 dev.copy(png, file="plot2.png", width=480, height=480)
