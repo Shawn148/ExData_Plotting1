@@ -24,7 +24,7 @@ summary(powerdata1$Datetime)# make sure the data covers the whole specified time
 
 # Construct the second plot
 par(mfrow=c(1,1))
-plot(powerdata1$Datetime, powerdata1$Global_active_power,  type="l", xlab="",
+plot(powerdata1$Datetime, powerdata1$Sub_metering_1,  type="l", xlab="",
     ylab="Global Active Power (kilowatts)")
     
 lines(powerdata1$Datetime, powerdata1$Sub_metering_2,  type="l", col="red", xlab="", ylab="")
